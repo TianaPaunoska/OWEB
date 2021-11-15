@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiana Paunoska</title>
+    <title>Tiana Paunoska | Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="homestyles.css">
+    <link rel="icon" href="sliki/favicon.ico">
 </head>
 
 <header>
@@ -19,6 +20,7 @@
             <li><a class="special" href="blogposts.html">Latest Posts</a></li>
             <li><a class="special" href="gallery.html">Gallery</a></li>
             <li><a class="special" href="contact.html">Contact</a></li>
+            <li class="imgEl"><img src="sliki/logo.png" alt="Logo"></li>
         </ul>
     </nav>
 </header>
@@ -69,7 +71,8 @@
                         <button>See my gallery</button>
                     </a>
                 </p>
-                <p id="aboutme" class="textbox4">ABOUT ME<br>I am currently an electrical engineering student,<br>
+                <h1 class="name2">ABOUT ME</h1>
+                <p id="aboutme" class="textbox4">I am currently an electrical engineering student,<br>
                 specializing in the field of computer technologies and engineering.<br>
                 I created this website as a project task in web programming.<br>
                 <em>Data Science & Machine Learning</em><br>
@@ -79,11 +82,12 @@
                 I simply love coding and developing new coding techniques.<br>
                 Coding can be tricky, but also it stimulates our thinking<br>
                 and is opening new ways of solving complex tasks.</p>
-                <p class="textbox4">FEEDBACK FORM<br>
-                    <form method="post">
+                <h1 class="name2">FEEDBACK FORM</h1>
+                <p class="textbox5">
+                    <form method="post" action="#">
                         <p>Feel free to share your experience with my page.</p>
                         <label>
-                        Name<br><input type="text"></label>
+                        Name<br><input type="text" placeholder="Name" required /></label>
                         <p>
                         <label>Comment<br>
                             <textarea rows="4" cols="36">Enter any comment.</textarea>
@@ -115,10 +119,10 @@
                         </p>
                         <p>
                             <label>
-                                <input type="submit" value="Submit">
+                                <input id="myButton" class="buttons" type="submit" value="Submit">
                             </label>
                             <label>
-                                <input type="reset" value="Clear">
+                                <input class="buttons" type="reset" value="Clear">
                             </label>
                         </p>
                     </form>
@@ -135,5 +139,33 @@
                 </footer>
         </div>
     </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">Click outside of window to close</span>
+            <img src="sliki/feedbackwindow.jpg" alt="ThankYou">
+        </div>
+    </div>
+
+    <script>
+        var modal=document.getElementById("myModal");
+        var btn=document.getElementById("myButton");
+        var spn=document.getElementsByClassName("close");
+        btn.onclick=function(event){
+            modal.style.display="block";
+            event.preventDefault();
+        }
+        spn.onclick=function(event){
+            if(event.target==span){
+                modal.style.display="none";
+            }
+        }
+        window.onclick=function(event){
+            if(event.target==modal){
+                modal.style.display="none";
+            }
+        }
+    </script>
+
 </body>
 </html>

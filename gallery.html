@@ -4,11 +4,14 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiana Paunoska</title>
+    <title>Tiana Paunoska | Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="gallerystyles.css">
+    <link rel="icon" href="sliki/favicon.ico">
+    <script src="galleryscript.js"></script>
+    <script src="galleryscript2.js"></script>
 </head>
     
 <header>
@@ -19,6 +22,7 @@
             <li><a class="special" href="blogposts.html">Latest Posts</a></li>
             <li><a class="special" href="gallery.html">Gallery</a></li>
             <li><a class="special" href="contact.html">Contact</a></li>
+            <li class="imgEl"><img src="sliki/logo.png" alt="Logo"></li>
         </ul>
     </nav>
 </header>
@@ -27,226 +31,278 @@
     <div class="container">
         <div class="image">
             <h1>Budapest, Hungary</h1>
-            <img class="images" src="sliki/budapest1.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img1" class="images" src="sliki/budapest1.JPG" onclick="f1()">
+            <div class="icons">
+                <img src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike1()">
+                <p class="likes"><span id="numLikes1">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment1()">
+                <div id="comment1"></div>
             </div>
         </div>
+        <div id="myModal1" class="modal">
+            <span id="span1" class="close">&times;</span>
+            <img class="modal-content" id="img01">
+          </div>
         <div class="image">
             <h1>Budapest, Hungary</h1>
-            <img class="images" src="sliki/budapest2.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img2" class="images" src="sliki/budapest2.JPG" onclick="f2()">
+            <div class="icons">
+                <img src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike2()">
+                <p class="likes"><span id="numLikes2">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment2()">
+                <div id="comment2"></div>
             </div>
         </div>
+        <div id="myModal2" class="modal">
+            <span id="span2" class="close">&times;</span>
+            <img class="modal-content" id="img02">
+          </div>
         <div class="image">
             <h1>Budapest, Hungary</h1>
-            <img class="images" src="sliki/budapest3.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img3" class="images" src="sliki/budapest3.JPG" onclick="f3()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike3()">
+                <p class="likes"><span id="numLikes3">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment3()">
+                <div id="comment3"></div>
             </div>
         </div>
+        <div id="myModal3" class="modal">
+            <span id="span3" class="close">&times;</span>
+            <img class="modal-content" id="img03">
+          </div>
         <div class="image">
             <h1>Dresden, Germany</h1>
-            <img class="images" src="sliki/dresden1.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img4" class="images" src="sliki/dresden1.JPG" onclick="f4()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike4()">
+                <p class="likes"><span id="numLikes4">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment4()">
+                <div id="comment4"></div>
             </div>
         </div>
+        <div id="myModal4" class="modal">
+            <span id="span4" class="close">&times;</span>
+            <img class="modal-content" id="img04">
+          </div>
         <div class="image">
             <h1>Dresden, Germany</h1>
-            <img class="images" src="sliki/dresden2.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img5" class="images" src="sliki/dresden2.JPG" onclick="f5()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike5()">
+                <p class="likes"><span id="numLikes5">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment5()">
+                <div id="comment5"></div>
             </div>
         </div>
+        <div id="myModal5" class="modal">
+            <span id="span5" class="close">&times;</span>
+            <img class="modal-content" id="img05">
+          </div>
         <div class="image">
             <h1>Dresden, Germany</h1>
-            <img class="images" src="sliki/dresden3.jpg">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img6" class="images" src="sliki/dresden3.jpg" onclick="f6()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike6()">
+                <p class="likes"><span id="numLikes6">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment6()">
+                <div id="comment6"></div>
             </div>
         </div>
+        <div id="myModal6" class="modal">
+            <span id="span6" class="close">&times;</span>
+            <img class="modal-content" id="img06">
+          </div>
         <div class="image">
             <h1>Paris, France</h1>
-            <img class="images" src="sliki/paris1.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img7" class="images" src="sliki/paris1.JPG" onclick="f7()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike7()">
+                <p class="likes"><span id="numLikes7">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment7()">
+                <div id="comment7"></div>
             </div>
         </div>
+        <div id="myModal7" class="modal">
+            <span id="span7" class="close">&times;</span>
+            <img class="modal-content" id="img07">
+          </div>
         <div class="image">
             <h1>Paris, France</h1>
-            <img class="images" src="sliki/paris2.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img8" class="images" src="sliki/paris2.JPG" onclick="f8()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike8()">
+                <p class="likes"><span id="numLikes8">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment8()">
+                <div id="comment8"></div>
             </div>
         </div>
+        <div id="myModal8" class="modal">
+            <span id="span8" class="close">&times;</span>
+            <img class="modal-content" id="img08">
+          </div>
         <div class="image">
             <h1>Paris, France</h1>
-            <img class="images" src="sliki/paris3.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img9" class="images" src="sliki/paris3.JPG" onclick="f9()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike9()">
+                <p class="likes"><span id="numLikes9">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment9()">
+                <div id="comment9"></div>
             </div>
         </div>
+        <div id="myModal9" class="modal">
+            <span id="span9" class="close">&times;</span>
+            <img class="modal-content" id="img09">
+          </div>
         <div class="image">
             <h1>Paris, France</h1>
-            <img class="images" src="sliki/paris4.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img10" class="images" src="sliki/paris4.JPG" onclick="f10()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike10()">
+                <p class="likes"><span id="numLikes10">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment10()">
+                <div id="comment10"></div>
             </div>
         </div>
+        <div id="myModal10" class="modal">
+            <span id="span10" class="close">&times;</span>
+            <img class="modal-content" id="img010">
+          </div>
         <div class="image">
             <h1>Paris, France</h1>
-            <img class="images" src="sliki/paris5.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img11" class="images" src="sliki/paris5.JPG" onclick="f11()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike11()">
+                <p class="likes"><span id="numLikes11">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment11()">
+                <div id="comment11"></div>
             </div>
         </div>
+        <div id="myModal11" class="modal">
+            <span id="span11" class="close">&times;</span>
+            <img class="modal-content" id="img011">
+          </div>
         <div class="image">
             <h1>Paris, France</h1>
-            <img class="images" src="sliki/paris6.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img12" class="images" src="sliki/paris6.JPG" onclick="f12()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike12()">
+                <p class="likes"><span id="numLikes12">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment12()">
+                <div id="comment12"></div>
             </div>
         </div>
+        <div id="myModal12" class="modal">
+            <span id="span12" class="close">&times;</span>
+            <img class="modal-content" id="img012">
+          </div>
         <div class="image">
             <h1>Prague, Czech Republic</h1>
-            <img class="images" src="sliki/prague1.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img13" class="images" src="sliki/prague1.JPG" onclick="f13()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike13()">
+                <p class="likes"><span id="numLikes13">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment13()">
+                <div id="comment13"></div>
             </div>
         </div>
+        <div id="myModal13" class="modal">
+            <span id="span13" class="close">&times;</span>
+            <img class="modal-content" id="img013">
+          </div>
         <div class="image">
             <h1>Prague, Czech Republic</h1>
-            <img class="images" src="sliki/prague2.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img14" class="images" src="sliki/prague2.JPG" onclick="f14()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike14()">
+                <p class="likes"><span id="numLikes14">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment14()">
+                <div id="comment14"></div>
             </div>
         </div>
+        <div id="myModal14" class="modal">
+            <span id="span14" class="close">&times;</span>
+            <img class="modal-content" id="img014">
+          </div>
         <div class="image">
             <h1>Prague, Czech Republic</h1>
-            <img class="images" src="sliki/prague3.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img15" class="images" src="sliki/prague3.JPG" onclick="f15()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike15()">
+                <p class="likes"><span id="numLikes15">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment15()">
+                <div id="comment15"></div>
             </div>
         </div>
+        <div id="myModal15" class="modal">
+            <span id="span15" class="close">&times;</span>
+            <img class="modal-content" id="img015">
+          </div>
         <div class="image">
             <h1>Vienna, Austria</h1>
-            <img class="images" src="sliki/vienna1.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img16" class="images" src="sliki/vienna1.JPG" onclick="f16()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike16()">
+                <p class="likes"><span id="numLikes16">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment16()">
+                <div id="comment16"></div>
             </div>
         </div>
+        <div id="myModal16" class="modal">
+            <span id="span16" class="close">&times;</span>
+            <img class="modal-content" id="img016">
+          </div>
         <div class="image">
             <h1>Vienna, Austria</h1>
-            <img class="images" src="sliki/vienna2.JPG">
-            <div>
-                <button>Like</button>
-                <button>Comment
-                    <label>
-                        <textarea rows="1" cols="30"></textarea>
-                        <input type="submit" value="Post">
-                    </label>
-                </button>
+            <img id="img17" class="images" src="sliki/vienna2.JPG" onclick="f17()">
+            <div class="icons">
+                <img id="like" src="sliki/like.png" alt="Like" width="40" height="40" onclick="addLike17()">
+                <p class="likes"><span id="numLikes17">0</span></p>
+            </div>
+                <div class="icons">
+                <img id="comment" src="sliki/comment.png" alt="Comment" width="50" height="50" onclick="comment17">
+                <div id="comment17"></div>
             </div>
         </div>
+        <div id="myModal17" class="modal">
+            <span id="span17" class="close">&times;</span>
+            <img class="modal-content" id="img017">
+          </div>
     </div>
+
 </body>
 
 <footer><hr>

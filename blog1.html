@@ -4,11 +4,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tiana Paunoska</title>
+        <title>Tiana Paunoska | Post</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="poststyles.css">
+        <link rel="icon" href="sliki/favicon.ico">
     </head>
 
     <header>
@@ -19,12 +20,13 @@
                 <li><a class="special" href="blogposts.html">Latest Posts</a></li>
                 <li><a class="special" href="gallery.html">Gallery</a></li>
                 <li><a class="special" href="contact.html">Contact</a></li>
+                <li class="imgEl"><img src="sliki/logo.png" alt="Logo"></li>
             </ul>
         </nav>
     </header>
 
     <body>
-        <p><date>24/10/2021</date>
+        <p class="upperpart"><date>24/10/2021</date>
         <em>Science, Technology</em></p>
         <h1>NASA Completes Mega-Moon<br> Rocket Stacking, Invites<br> Media to Learn More</h1>
         <p>NASA’s Orion spacecraft is assured onto NASA's compelling and powerful Space Launch System rocket. It’s unified system is entering the final stage of preparations until it takes a flight test to the Moon. The mission Artemis I is said to pave the way for a flight test with crew in the future. With stacking already concluded, a series of interspersed tests now sit between the mega-Moon rocket and intended liftoff for deep space, estimated to be in February 2022.
@@ -35,10 +37,24 @@
             <img src="sliki/nasa.jpg" alt="Artemis - NASA"><br>
             NASA completed stacking Oct. 21, 2021, of the agency's Space Launch System rocket and Orion spacecraft for the Artemis I uncrewed mission around the Moon. The stacking operations were conducted inside the Vehicle Assembly Building at NASA's Kennedy Space Center in Florida.
             <em>Credits: NASA</em>
-        </p>    
-    </body>
+        </p> 
+        
+        <em>Start your discussion</em><hr>
+        <div>
+            <label>
+            <textarea rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
+            <button>Post</button>
+        </div>
+        <div id="info"></div>
 
-    <footer><hr>
+        <script>
+            function comment(){
+                var infoDiv=document.getElementById("info");
+                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label>"
+            }
+        </script>
+    </body>
+    <footer class="footerclass"><hr>
         <p class="standard">&copy; 2021 Tiana Paunoska</p>
         <p class="standard">Information</p>
         <p class="standard">

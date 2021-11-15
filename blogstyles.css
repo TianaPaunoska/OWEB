@@ -9,8 +9,19 @@ body, html
 header
 {
     width: 100%;
-    height: 80px;
+    height: 70px;
     background-color: rgb(150, 161, 209);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+nav
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
 }
 
 ul
@@ -26,6 +37,13 @@ li
     padding: 15px 30px;
 }
 
+li.imgEl
+{
+  float: left;
+  margin-left: -1025px;
+  margin-top: -35px;  
+}
+
 a.special
 {
     text-align: center;
@@ -35,10 +53,11 @@ a.special
     font-size: x-large;
 }
 
-a:hover
+a.special:hover
 {
     color: rgb(57, 66, 103);
     transition: 0.5s;
+    text-decoration: none;
 }
 
 img.menu
@@ -111,12 +130,13 @@ a:hover
     text-align: center;
 }
 
-footer
+.textbox4
 {
-    margin-top: 100px;
-    background-color: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
-    color: black;
+    margin-left: 800px;
+    margin-top: -150px;
+    margin-right: 150px;
+    vertical-align: auto;
+    float: right;
+    font-size: 500;
+    text-align: center;
 }
-

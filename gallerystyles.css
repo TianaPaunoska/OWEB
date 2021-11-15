@@ -9,8 +9,21 @@ body, html
 header
 {
     width: 100%;
-    height: 80px;
+    height: 70px;
     background-color: rgb(150, 161, 209);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+nav
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 ul
@@ -18,12 +31,22 @@ ul
     width: auto;
     margin-top: 20px;
     float: right;
+    z-index: 2;
 }
 
 li
 {
     display: inline-block;
     padding: 15px 30px;
+    z-index: 2;
+}
+
+li.imgEl
+{
+  float: left;
+  margin-left: -1000px;
+  margin-top: -35px;  
+  z-index: 2;
 }
 
 a.special
@@ -53,6 +76,7 @@ img.main
     width: max-content;
     background-repeat: no-repeat;
     background-position: center;
+    margin-top: 120px;
 }
 
 .container
@@ -67,6 +91,7 @@ img.main
     display: inline-block;
     margin-bottom: 10px;
     overflow: hidden;
+    z-index: 0;
 }
 
 img.images
@@ -97,6 +122,24 @@ h1
 .image:hover h1 
 {
     opacity: 0.5;
+}
+
+p.likes
+{
+    display: inline;
+    color: rgb(57, 66, 103);
+}
+
+.icons
+{
+    display: inline;
+    margin-left: 80px;
+}
+
+.icons:hover
+{
+    opacity: 0.5;
+    cursor: pointer;
 }
 
 @media screen and (max-width:1024px)
@@ -161,6 +204,7 @@ footer
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
     color: black;
+    margin-left: 20px;
 }
 
 button
@@ -173,7 +217,9 @@ button
     font-size: small;
     width: fit-content;
     color: white;
-    margin-top: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 120px;
 }
 
 button:hover
@@ -187,7 +233,193 @@ button:hover
     width: fit-content;
     color: black;
     margin-top: 12px;
+    cursor: pointer;
 }
 
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 3; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+  }
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
 
 
+#img1 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img1:hover {opacity: 0.7;}
+
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+  #img2 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img2:hover {opacity: 0.7;}
+
+  #img3 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img3:hover {opacity: 0.7;}
+
+  #img4 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img4:hover {opacity: 0.7;}
+
+  #img5 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img5:hover {opacity: 0.7;}
+
+  #img6 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img6:hover {opacity: 0.7;}
+
+  #img7 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img7:hover {opacity: 0.7;}
+
+  #img8 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img8:hover {opacity: 0.7;}
+
+  #img9 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img9:hover {opacity: 0.7;}
+
+  #img10 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img10:hover {opacity: 0.7;}
+
+  #img11 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img11:hover {opacity: 0.7;}
+
+  #img12 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img12:hover {opacity: 0.7;}
+
+  #img13 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img13:hover {opacity: 0.7;}
+
+  #img14 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img14:hover {opacity: 0.7;}
+
+  #img15 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img15:hover {opacity: 0.7;}
+
+  #img16 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img16:hover {opacity: 0.7;}
+
+  #img17 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #img17:hover {opacity: 0.7;}
