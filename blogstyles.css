@@ -140,3 +140,81 @@ a:hover
     font-size: 500;
     text-align: center;
 }
+
+.textbox5
+{
+    margin-top: 250px;
+    margin-left: -1100px;
+    vertical-align: auto;
+    font-size: 500;
+    text-align: center;
+}
+
+.textbox6
+{
+    margin-top: -120px;
+    margin-left: -300px;
+    vertical-align: auto;
+    font-size: 500;
+    text-align: center;
+}
+
+.textbox7
+{
+    margin-top: -130px;
+    margin-left: 470px;
+    vertical-align: auto;
+    font-size: 500;
+    text-align: center;
+}
+
+.textbox8
+{
+    margin-top: -130px;
+    margin-right: 230px;
+    vertical-align: auto;
+    font-size: 500;
+    text-align: center;
+    float: right;
+}
+
+.textbox9
+{
+    margin-top: -10px;
+    margin-left: 270px;
+    vertical-align: auto;
+    font-size: 500;
+    text-align: center;
+    float: left;
+}
+
+.textbox10
+{
+    margin-top: -10px;
+    margin-left: 70px;
+    vertical-align: auto;
+    font-size: 500;
+    text-align: center;
+    float: left;
+}
+
+.textbox11
+{
+    margin-top: 5px;
+    margin-right: 570px;
+    vertical-align: auto;
+    font-size: 500;
+    text-align: center;
+    float: right;
+}
+
+.textbox12
+{
+    margin-top: 7px;
+    margin-right: -640px;
+    vertical-align: auto;
+    font-size: 500;
+    text-align: center;
+    float: right;
+}
+

@@ -12,6 +12,7 @@ header
     height: 70px;
     background-color: rgb(150, 161, 209);
     position: fixed;
+    z-index: 2;
     left: 0;
     top: 0;
 }
@@ -186,3 +187,41 @@ label
     background-color: rgb(250, 244, 215);
 }
 
+.related
+{
+    display: inline-block;
+    position: relative;
+}
+
+.post
+{
+    text-decoration: none;
+}
+
+.post:hover
+{
+    opacity: 0.5;
+    cursor: pointer;
+    transition: ease-in;
+}
+
+.image
+{
+    z-index: 0;
+}
+
+.text
+{
+    color: white;
+    opacity: 0.7;
+    font-size: medium;
+    display: inline;
+    position: absolute;
+   
+    text-align: end;
+}
+
+.comm
+{
+    position: relative;
+}

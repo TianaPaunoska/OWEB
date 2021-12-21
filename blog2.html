@@ -10,6 +10,38 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="poststyles.css">
         <link rel="icon" href="sliki/favicon.ico">
+        <script type="text/javascript" 
+    src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script>
+        $(window).on("load",function(){
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    var comm=$("#comm").val();
+                    var time=new Date($.now());
+                    var day=time.getDate();
+                    var month=time.getMonth();
+                    var year=time.getFullYear();
+                    var hour=time.getHours();
+                    var min=time.getMinutes();
+                    var prev=$("#info").html();
+                    localStorage.setItem('comm',prev);
+                    $("#info").html(prev + "<em>User says: </em>" + " " + comm + hour + ":" + min + " " + day + "." + month + "." + year + "<br>");
+                })
+            })
+        })
+    </script>
+    <script>
+        $(window).on("load",function(){
+            const prevItems=localStorage.getItem('comm');
+            $("#info").html(prevItems);
+        })
+    </script>
+    <script>
+     $(window).on("reload",function(){
+            const prevItems=localStorage.getItem('comm');
+            $("#info").html(prevItems);
+        })   
+    </script>
     </head>
 
     <header>
@@ -40,19 +72,28 @@
         <p>This novel, published in book form in 1861, chronicles the coming of age of the orphan Philip Pirrip while also addressing such issues as social class and human worth. He grows up in the marshlands of Kent, where he lives with his disagreeable sister and her sweet-natured husband, the blacksmith Joe Gargery. The classic novel was one of its author’s greatest critical and popular successes, and is definitely worth a read.</p>
         <p>Siddhartha</p>
         <p>Inspired by the author’s visit to India before World War I, the theme of the novel is the search for self-realization by a young Brahman, Siddhartha. Realizing the contradictions between reality and what he has been taught, he abandons his comfortable life to wander. His goal is to find the serenity that will enable him to defeat fear and to experience with equanimity the contrasts of life, including joy and sorrow, life and death. Despairing of finding fulfillment, he goes to the river and there learns simply to listen. He discovers within himself a spirit of love and learns to accept human separateness. In the end, Siddhartha grasps the wholeness of life and achieves a state of bliss and highest wisdom.</p>
-
+        <em>Related Posts</em><hr>
+        <div class="related">
+        <div class="related">
+            <p class="text">Five Best Books by Women <br> Writing in World War II</p>
+            <a class="post" href="blog11.html">
+                <img class="image" src="sliki/black.jpg" width="400" height="200">
+            </a>
+        </div>
+        </div>
+        <br>
         <em>Start your discussion</em><hr>
         <div>
             <label>
-            <textarea rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
-            <button>Post</button>
+            <textarea id="comm" rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
+            <button id="btn">Post</button>
         </div>
         <div id="info"></div>
 
         <script>
             function comment(){
                 var infoDiv=document.getElementById("info");
-                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label>"
+                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label><br>"
             }
         </script>
     </body>

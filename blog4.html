@@ -10,6 +10,38 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="poststyles.css">
         <link rel="icon" href="sliki/favicon.ico">
+        <script type="text/javascript" 
+    src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script>
+        $(window).on("load",function(){
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    var comm=$("#comm").val();
+                    var time=new Date($.now());
+                    var day=time.getDate();
+                    var month=time.getMonth();
+                    var year=time.getFullYear();
+                    var hour=time.getHours();
+                    var min=time.getMinutes();
+                    var prev=$("#info").html();
+                    localStorage.setItem('comm',prev);
+                    $("#info").html(prev + "<em>User says: </em>" + " " + comm + hour + ":" + min + " " + day + "." + month + "." + year + "<br>");
+                })
+            })
+        })
+    </script>
+    <script>
+        $(window).on("load",function(){
+            const prevItems=localStorage.getItem('comm');
+            $("#info").html(prevItems);
+        })
+    </script>
+    <script>
+     $(window).on("reload",function(){
+            const prevItems=localStorage.getItem('comm');
+            $("#info").html(prevItems);
+        })   
+    </script>
     </head>
 
     <header>
@@ -50,18 +82,33 @@
                 <p>The research will be published in the Monthly Notices of the Royal Astronomical Society. Now, the researchers think the same technique can help find other black holes in other dark corners of the universe, helping us understand how these strange objects age and develop.
 
                     "The result shown here represents just one of the wanted criminals," said Saracino, "but when you have found one, you are well on your way to discovering many others, in different clusters."</p>
+                    <em>Related Posts</em><hr>
+        <div class="related">
+        <div class="related">
+            <p class="text">NASA Completes Mega-Moon<br> Rocket Stacking, Invites<br> Media to Learn More</p>
+            <a class="post" href="blog1.html">
+                <img class="image" src="sliki/nasa.jpg" width="400" height="200">
+            </a>
+        </div>
+        <div class="related">
+            <p class="text">NASA's Juno Spacecraft <br> 'Hears' Jupiter's Moon</p>
+            <a class="post" href="blog8.html">
+                <img src="sliki/juno.jpg" width="400" height="200">
+            </a>
+        </div></div>
+        <br>
                     <em>Start your discussion</em><hr>
         <div>
             <label>
-            <textarea rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
-            <button>Post</button>
+            <textarea id="comm" rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
+            <button id="btn">Post</button>
         </div>
         <div id="info"></div>
 
         <script>
             function comment(){
                 var infoDiv=document.getElementById("info");
-                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label>"
+                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label><br>"
             }
         </script>
     </body>

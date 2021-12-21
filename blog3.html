@@ -10,6 +10,38 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="poststyles.css">
         <link rel="icon" href="sliki/favicon.ico">
+        <script type="text/javascript" 
+    src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script>
+        $(window).on("load",function(){
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    var comm=$("#comm").val();
+                    var time=new Date($.now());
+                    var day=time.getDate();
+                    var month=time.getMonth();
+                    var year=time.getFullYear();
+                    var hour=time.getHours();
+                    var min=time.getMinutes();
+                    var prev=$("#info").html();
+                    localStorage.setItem('comm',prev);
+                    $("#info").html(prev + "<em>User says: </em>" + " " + comm + hour + ":" + min + " " + day + "." + month + "." + year + "<br>");
+                })
+            })
+        })
+    </script>
+    <script>
+        $(window).on("load",function(){
+            const prevItems=localStorage.getItem('comm');
+            $("#info").html(prevItems);
+        })
+    </script>
+    <script>
+     $(window).on("reload",function(){
+            const prevItems=localStorage.getItem('comm');
+            $("#info").html(prevItems);
+        })   
+    </script>
     </head>
 
     <header>
@@ -30,19 +62,28 @@
         <em>Science, Coding</em></p>
         <h1>Drug Discovery<br> with Data Science</h1>
         <p>Drug Discovery is a highly complicated discipline. Pharmaceutical industries are heavily relying on data science to solve their problems and create better drugs for the people. This specific topic is a time-consuming process that involves heavy financial expenditure, as well as serious and heavy testing. Data Science and Machine Learning algorithms are revolutionizing this process and providing extensive insights into optimizing and increasing the success rate of predictions. Pharmaceutical companies use the insights from the patient information such as mutation profiles and patient metadata. This information helps the researchers to develop models and find statistical relationships between the attributes. This way, companies can design drugs that address the key mutations in the genetic sequences. Also, deep learning algorithms can find the probability of the development of disease in the human system. The data science algorithms can also help to simulate how the drugs will act in the human body that takes away the long laboratory experimentations. With the advancements in the data-science facilitated drug discovery, it is now possible to improve the collection of historical data to assist in the drug development process. With a combination of genetics and drug-protein binding databases, it is possible to develop new innovations in this field. Furthermore, using data science, researchers can analyze and test the chemical compounds against a combination of different cells, genetic mutations etc. Usage of machine learning algorithms, researchers can develop models that compute the prediction from the given variables.</p>
-
+        <em>Related Posts</em><hr>
+        <div class="related">
+        <div class="related">
+            <p class="text">The Ancient History of <br> "Intelligent" Machines</p>
+            <a class="post" href="blog12.html">
+                <img class="image" src="sliki/hand.jpg" width="400" height="200">
+            </a>
+        </div>
+        </div>
+        <br>
         <em>Start your discussion</em><hr>
         <div>
             <label>
-            <textarea rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
-            <button>Post</button>
+            <textarea id="comm" rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
+            <button id="btn">Post</button>
         </div>
         <div id="info"></div>
 
         <script>
             function comment(){
                 var infoDiv=document.getElementById("info");
-                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label>"
+                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label><br>"
             }
         </script>
     </body>

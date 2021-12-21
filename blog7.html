@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tiana Paunoska | Post</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="poststyles.css">
+        <link rel="icon" href="sliki/favicon.ico">
+    </head>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a class="special" href="home.html">Home</a></li>
+                <li><a class="special" href="favthings.html">Favorite Things</a></li>
+                <li><a class="special" href="blogposts.html">Latest Posts</a></li>
+                <li><a class="special" href="gallery.html">Gallery</a></li>
+                <li><a class="special" href="contact.html">Contact</a></li>
+                <li class="imgEl"><img src="sliki/logo.png" alt="Logo"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <p class="upperpart"><date>19/11/2021</date>
+            <em>Nature, Science</em></p>
+            <h1>Who will pay for the <br> damage caused<br> by climate change?</h1>
+            <p>
+                n September 2017, John Mussington was forced to evacuate his home and leave behind his animals when the small Caribbean island of Barbuda was hit by category 5 Hurricane Irma, at 185mph (300km/h).
+
+"It was devastating," says Mussington, a marine biologist and a high school principal on Barbuda. "People were traumatised, there were many buildings without roofs and we had no electricity. Our immediate concern was: how do we survive the next day?"
+
+Every building was damaged by Irma, with 23% completely destroyed. A 2018 study concluded that climate change worsened destructive hurricanes, including Irma, by increasing rainfall by between 5 and 10%.
+
+The initial shock was compounded when all of Barbuda's 1,800 residents were ordered to evacuate to their sister island, Antigua, for one month. Mussington says this completely upended his life.
+
+"That was the most traumatic of all, sitting there in Antigua, worrying about our farms, animals and businesses instead of starting the recovery," he recalls. "I'm a beekeeper and all my colonies were knocked down - I lost my business, as did many farmers and fishermen."
+            </p>
+            <p>
+                "When countries lose their islands because of sea level rise and extreme events, they are losing their culture and traditions. There is no adapting to that," says Le-Anne Roper, coordinator for loss and damage at the Alliance of Small Island States (Aosis).
+
+For Barbudans, the destruction of the biodiversity and local environment is a direct violation of their way of life. "Our whole culture, identity and way of life is linked to the environment and natural resources," says Mussington, adding that many Barbudans spend their spare time outdoors, fishing, hunting and camping in the wild. "It is part of who we are as Barbudans."
+
+Damaged buildings and job losses aren't the only victims of extreme weather events caused by climate change. From Barbuda to Fiji, entire cultures are at stake. But with more awareness, new technologies and strong calls for international support, these small island nations are fighting back.
+            </p>
+            <p class="small">
+                <img src="sliki/climate.jpg">
+                <em>Credits: Getty Images</em>
+            </p>
+            <em>Start your discussion</em><hr>
+            <div>
+                <label>
+                <textarea id="comm" rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
+                <button id="btn">Post</button>
+            </div>
+            <div id="info"></div>
+    
+            <script>
+                function comment(){
+                    var infoDiv=document.getElementById("info");
+                    infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label>"
+                }
+            </script>
+        </body>
+        <footer class="footerclass"><hr>
+            <p class="standard">&copy; 2021 Tiana Paunoska</p>
+            <p class="standard">Information</p>
+            <p class="standard">
+                <a href="contact.html">contact me</a>
+            </p>
+        </footer>
+    </body>
+</html>
