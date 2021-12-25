@@ -15,32 +15,33 @@
     <script>
         $(window).on("load",function(){
             $(document).ready(function(){
-                $("#btn").click(function(){
-                    var comm=$("#comm").val();
-                    var time=new Date($.now());
-                    var day=time.getDate();
-                    var month=time.getMonth();
-                    var year=time.getFullYear();
-                    var hour=time.getHours();
-                    var min=time.getMinutes();
-                    var prev=$("#info").html();
-                    localStorage.setItem('comm',prev);
-                    $("#info").html(prev + "<em>User says: </em>" + " " + comm + hour + ":" + min + " " + day + "." + month + "." + year + "<br>");
+                $("#p12").click(function(){
+                    var user12=$("#u12").val();
+                    var comment12=$("#c12").val();
+                    var time12=new Date($.now());
+                    var day12=time12.getDate();
+                    var month12=time12.getMonth();
+                    var year12=time12.getFullYear();
+                    var hour12=time12.getHours();
+                    var min12=time12.getMinutes();
+                    var prev12=$("#i12").html();
+                    localStorage.setItem('c12',prev12);
+                    $("#i12").html(prev12 + "<div class=\"imguser\"><img src=\"sliki/user.png\" width=\"50\" height=\"50\"></div><div class=\"commbox\"><p class=\"username\">" + user12 + "</p><em class=\"timetext\">" + hour12 +":" + min12 + "   " + day12 + "/" + month12 + "/" + year12 + "</em><p class=\"commtext\">" + comment12 + "</p></div><hr><br>");
                 })
             })
         })
     </script>
     <script>
         $(window).on("load",function(){
-            const prevItems=localStorage.getItem('comm');
-            $("#info").html(prevItems);
+            const prevComm12=localStorage.getItem('c12');
+            $("#i12").html(prevComm12);
         })
     </script>
     <script>
-     $(window).on("reload",function(){
-            const prevItems=localStorage.getItem('comm');
-            $("#info").html(prevItems);
-        })   
+        $(window).on("reload",function(){
+            const prevComm12=localStorage.getItem('c12');
+            $("#i12").html(prevComm12);
+        })
     </script>
     </head>
 
@@ -79,19 +80,17 @@ Robots and AI have long been used both to foreground and to trouble the conceptu
         </div>
         <br>
             <em>Start your discussion</em><hr>
-        <div>
-            <label>
-            <textarea id="comm" rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
-            <button id="btn">Post</button>
-        </div>
-        <div id="info"></div>
+            <div>
+                <label>
+                <textarea id="c12" rows="10" cols="80">Share your thoughts...</textarea></label>
+                <label>Name<input id="u12" type=text required /></label><br>
+                <label>Email<input type=\text\></label><br>
+                <button id="p12" class="postbtn">Post</button>
+            </div><hr>
+            <br>
+            <div id="i12" class="comm"></div>
 
-        <script>
-            function comment(){
-                var infoDiv=document.getElementById("info");
-                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label><br>"
-            }
-        </script>
+        
     </body>
     <footer class="footerclass"><hr>
         <p class="standard">&copy; 2021 Tiana Paunoska</p>

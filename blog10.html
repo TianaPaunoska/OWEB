@@ -15,32 +15,33 @@
     <script>
         $(window).on("load",function(){
             $(document).ready(function(){
-                $("#btn").click(function(){
-                    var comm=$("#comm").val();
-                    var time=new Date($.now());
-                    var day=time.getDate();
-                    var month=time.getMonth();
-                    var year=time.getFullYear();
-                    var hour=time.getHours();
-                    var min=time.getMinutes();
-                    var prev=$("#info").html();
-                    localStorage.setItem('comm',prev);
-                    $("#info").html(prev + "<em>User says: </em>" + " " + comm + hour + ":" + min + " " + day + "." + month + "." + year + "<br>");
+                $("#p10").click(function(){
+                    var user10=$("#u10").val();
+                    var comment10=$("#c10").val();
+                    var time10=new Date($.now());
+                    var day10=time10.getDate();
+                    var month10=time10.getMonth();
+                    var year10=time10.getFullYear();
+                    var hour10=time10.getHours();
+                    var min10=time10.getMinutes();
+                    var prev10=$("#i10").html();
+                    localStorage.setItem('c10',prev10);
+                    $("#i10").html(prev10 + "<div class=\"imguser\"><img src=\"sliki/user.png\" width=\"50\" height=\"50\"></div><div class=\"commbox\"><p class=\"username\">" + user10 + "</p><em class=\"timetext\">" + hour10 +":" + min10 + "   " + day10 + "/" + month10 + "/" + year10 + "</em><p class=\"commtext\">" + comment10 + "</p></div><hr><br>");
                 })
             })
         })
     </script>
     <script>
         $(window).on("load",function(){
-            const prevItems=localStorage.getItem('comm');
-            $("#info").html(prevItems);
+            const prevComm10=localStorage.getItem('c10');
+            $("#i10").html(prevComm10);
         })
     </script>
     <script>
-     $(window).on("reload",function(){
-            const prevItems=localStorage.getItem('comm');
-            $("#info").html(prevItems);
-        })   
+        $(window).on("reload",function(){
+            const prevComm10=localStorage.getItem('c10');
+            $("#i10").html(prevComm10);
+        })
     </script>
     </head>
 
@@ -104,19 +105,17 @@ Two fantastic games and one alright one later, the Survivor portion of Lara Crof
         </div>
         <br>
             <em>Start your discussion</em><hr>
-        <div>
-            <label>
-            <textarea id="comm" rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
-            <button id="btn">Post</button>
-        </div>
-        <div id="info"></div>
+            <div>
+                <label>
+                <textarea id="c10" rows="10" cols="80">Share your thoughts...</textarea></label>
+                <label>Name<input id="u10" type=text required /></label><br>
+                <label>Email<input type=\text\></label><br>
+                <button id="p10" class="postbtn">Post</button>
+            </div><hr>
+            <br>
+            <div id="i10" class="comm"></div>
 
-        <script>
-            function comment(){
-                var infoDiv=document.getElementById("info");
-                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label><br>"
-            }
-        </script>
+        
     </body>
     <footer class="footerclass"><hr>
         <p class="standard">&copy; 2021 Tiana Paunoska</p>

@@ -10,6 +10,39 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="poststyles.css">
         <link rel="icon" href="sliki/favicon.ico">
+        <script type="text/javascript" 
+        src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+        <script>
+            $(window).on("load",function(){
+                $(document).ready(function(){
+                    $("#p7").click(function(){
+                        var user7=$("#u7").val();
+                        var comment7=$("#c7").val();
+                        var time7=new Date($.now());
+                        var day7=time7.getDate();
+                        var month7=time7.getMonth();
+                        var year7=time7.getFullYear();
+                        var hour7=time7.getHours();
+                        var min7=time7.getMinutes();
+                        var prev7=$("#i7").html();
+                        localStorage.setItem('c7',prev7);
+                        $("#i7").html(prev7 + "<div class=\"imguser\"><img src=\"sliki/user.png\" width=\"50\" height=\"50\"></div><div class=\"commbox\"><p class=\"username\">" + user7 + "</p><em class=\"timetext\">" + hour7 +":" + min7 + "   " + day7 + "/" + month7 + "/" + year7 + "</em><p class=\"commtext\">" + comment7 + "</p></div><hr><br>");
+                    })
+                })
+            })
+        </script>
+        <script>
+            $(window).on("load",function(){
+                const prevComm7=localStorage.getItem('c7');
+                $("#i7").html(prevComm7);
+            })
+        </script>
+        <script>
+            $(window).on("reload",function(){
+                const prevComm7=localStorage.getItem('c7');
+                $("#i7").html(prevComm7);
+            })
+        </script>
     </head>
 
     <header>
@@ -54,17 +87,15 @@ Damaged buildings and job losses aren't the only victims of extreme weather even
             <em>Start your discussion</em><hr>
             <div>
                 <label>
-                <textarea id="comm" rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
-                <button id="btn">Post</button>
-            </div>
-            <div id="info"></div>
+                <textarea id="c7" rows="10" cols="80">Share your thoughts...</textarea></label>
+                <label>Name<input id="u7" type=text required /></label><br>
+                <label>Email<input type=\text\></label><br>
+                <button id="p7" class="postbtn">Post</button>
+            </div><hr>
+            <br>
+            <div id="i7" class="comm"></div>
     
-            <script>
-                function comment(){
-                    var infoDiv=document.getElementById("info");
-                    infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label>"
-                }
-            </script>
+            
         </body>
         <footer class="footerclass"><hr>
             <p class="standard">&copy; 2021 Tiana Paunoska</p>

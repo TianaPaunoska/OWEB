@@ -10,6 +10,78 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="homestyles.css">
     <link rel="icon" href="sliki/favicon.ico">
+    <script type="text/javascript" 
+    src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script>
+        $(document).ready(function(){
+            $("#name").focus(function(){
+                $(this).css("background-color","rgb(250,244,215)");
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#comment").focus(function(){
+                $(this).css("background-color","rgb(250,244,215)");
+            })
+        })
+    </script>
+     <script>
+        $(document).ready(function(){
+            $("#arrow").mouseover(function(){
+                $(this).css("transform","scale(1.1,1.1)");
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#arrow").mouseout(function(){
+                $(this).css("transform","scale(1,1)");
+            })
+        })
+    </script>
+     <script>
+        $(document).ready(function(){
+            $("#mail").mouseover(function(){
+                $(this).css("transform","scale(1.2,1.2)");
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#mail").mouseout(function(){
+                $(this).css("transform","scale(1,1)");
+            })
+        })
+    </script>
+     <script>
+        $(document).ready(function(){
+            $("#fb").mouseover(function(){
+                $(this).css("transform","scale(1.2,1.2)");
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#fb").mouseout(function(){
+                $(this).css("transform","scale(1,1)");
+            })
+        })
+    </script>
+     <script>
+        $(document).ready(function(){
+            $("#ig").mouseover(function(){
+                $(this).css("transform","scale(1.2,1.2)");
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#ig").mouseout(function(){
+                $(this).css("transform","scale(1,1)");
+            })
+        })
+    </script>
 </head>
 
 <header>
@@ -28,14 +100,14 @@
 <body>
     <div class="container">
         <div class="imagebox">
-            <img src="sliki/me.jpg" alt="Pic of me">
+            <img id="picture" src="sliki/me.jpg" alt="Pic of me">
             <div class="mediabox">
                 <a href="mailto:tiana_paunoska@hotmail.com">
-                <img src="sliki/email.png" alt="Email"></a>
+                <img id="mail" src="sliki/email.png" alt="Email"></a>
                 <a href="https://www.facebook.com/tiana.paunoska/">
-                <img src="sliki/facebook.png" alt="Facebook"></a>
+                <img id="fb" src="sliki/facebook.png" alt="Facebook"></a>
                 <a href="https://www.instagram.com/p.tianaa/">
-                <img src="sliki/instagram.png" alt="Instagram"></a>
+                <img id="ig" src="sliki/instagram.png" alt="Instagram"></a>
             </div>
         </div>
         <div class="textbox">
@@ -48,7 +120,7 @@
                 better place with science and technology.</p>
                 <p>
                     <a href="#aboutme">
-                    <img class="arrow" src="sliki/arrow.png"></a>
+                    <img id="arrow" class="arrow" src="sliki/arrow.png"></a>
                 </p>
                 <p class="textbox2">We are all different in our own tastes and opinions.<br> 
                     That is what makes us special.<br>
@@ -87,10 +159,10 @@
                     <form method="post" action="#">
                         <p>Feel free to share your experience with my page.</p>
                         <label>
-                        Name<br><input type="text" placeholder="Name" required /></label>
+                        Name<br><input id="name" type="text" placeholder="Name" required /></label>
                         <p>
                         <label>Comment<br>
-                            <textarea rows="4" cols="36">Enter any comment.</textarea>
+                            <textarea id="comment" rows="4" cols="36">Enter any comment.</textarea>
                         </label></p>
                         <p>
                             <label>Rate my page<br>

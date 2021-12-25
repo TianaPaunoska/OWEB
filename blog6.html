@@ -15,32 +15,33 @@
     <script>
         $(window).on("load",function(){
             $(document).ready(function(){
-                $("#btn").click(function(){
-                    var comm=$("#comm").val();
-                    var time=new Date($.now());
-                    var day=time.getDate();
-                    var month=time.getMonth();
-                    var year=time.getFullYear();
-                    var hour=time.getHours();
-                    var min=time.getMinutes();
-                    var prev=$("#info").html();
-                    localStorage.setItem('comm',prev);
-                    $("#info").html(prev + "<em>User says: </em>" + " " + comm + hour + ":" + min + " " + day + "." + month + "." + year + "<br>");
+                $("#p6").click(function(){
+                    var user6=$("#u6").val();
+                    var comment6=$("#c6").val();
+                    var time6=new Date($.now());
+                    var day6=time6.getDate();
+                    var month6=time6.getMonth();
+                    var year6=time6.getFullYear();
+                    var hour6=time6.getHours();
+                    var min6=time6.getMinutes();
+                    var prev6=$("#i6").html();
+                    localStorage.setItem('c6',prev6);
+                    $("#i6").html(prev6 + "<div class=\"imguser\"><img src=\"sliki/user.png\" width=\"50\" height=\"50\"></div><div class=\"commbox\"><p class=\"username\">" + user6 + "</p><em class=\"timetext\">" + hour6 +":" + min6 + "   " + day6 + "/" + month6 + "/" + year6 + "</em><p class=\"commtext\">" + comment6 + "</p></div><hr><br>");
                 })
             })
         })
     </script>
     <script>
         $(window).on("load",function(){
-            const prevItems=localStorage.getItem('comm');
-            $("#info").html(prevItems);
+            const prevComm6=localStorage.getItem('c6');
+            $("#i6").html(prevComm6);
         })
     </script>
     <script>
-     $(window).on("reload",function(){
-            const prevItems=localStorage.getItem('comm');
-            $("#info").html(prevItems);
-        })   
+        $(window).on("reload",function(){
+            const prevComm6=localStorage.getItem('c6');
+            $("#i6").html(prevComm6);
+        })
     </script>
     </head>
 
@@ -85,17 +86,15 @@ The same source, on the other hand, guarantees that the game will include multip
         <em>Start your discussion</em><hr>
         <div>
             <label>
-            <textarea id="comm" rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
-            <button id="btn">Post</button>
-        </div>
-        <div id="info"></div>
+            <textarea id="c6" rows="10" cols="80">Share your thoughts...</textarea></label>
+            <label>Name<input id="u6" type=text required /></label><br>
+            <label>Email<input type=\text\></label><br>
+            <button id="p6" class="postbtn">Post</button>
+        </div><hr>
+        <br>
+        <div id="i6" class="comm"></div>
 
-        <script>
-            function comment(){
-                var infoDiv=document.getElementById("info");
-                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label><br>"
-            }
-        </script>
+        
     </body>
     <footer class="footerclass"><hr>
         <p class="standard">&copy; 2021 Tiana Paunoska</p>

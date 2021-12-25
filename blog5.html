@@ -15,32 +15,33 @@
     <script>
         $(window).on("load",function(){
             $(document).ready(function(){
-                $("#btn").click(function(){
-                    var comm=$("#comm").val();
-                    var time=new Date($.now());
-                    var day=time.getDate();
-                    var month=time.getMonth();
-                    var year=time.getFullYear();
-                    var hour=time.getHours();
-                    var min=time.getMinutes();
-                    var prev=$("#info").html();
-                    localStorage.setItem('comm',prev);
-                    $("#info").html(prev + "<em>User says: </em>" + " " + comm + hour + ":" + min + " " + day + "." + month + "." + year + "<br>");
+                $("#p5").click(function(){
+                    var user5=$("#u5").val();
+                    var comment5=$("#c5").val();
+                    var time5=new Date($.now());
+                    var day5=time5.getDate();
+                    var month5=time5.getMonth();
+                    var year5=time5.getFullYear();
+                    var hour5=time5.getHours();
+                    var min5=time5.getMinutes();
+                    var prev5=$("#i5").html();
+                    localStorage.setItem('c5',prev5);
+                    $("#i5").html(prev5 + "<div class=\"imguser\"><img src=\"sliki/user.png\" width=\"50\" height=\"50\"></div><div class=\"commbox\"><p class=\"username\">" + user5 + "</p><em class=\"timetext\">" + hour5 +":" + min5 + "   " + day5 + "/" + month5 + "/" + year5 + "</em><p class=\"commtext\">" + comment5 + "</p></div><hr><br>");
                 })
             })
         })
     </script>
     <script>
         $(window).on("load",function(){
-            const prevItems=localStorage.getItem('comm');
-            $("#info").html(prevItems);
+            const prevComm5=localStorage.getItem('c5');
+            $("#i5").html(prevComm5);
         })
     </script>
     <script>
-     $(window).on("reload",function(){
-            const prevItems=localStorage.getItem('comm');
-            $("#info").html(prevItems);
-        })   
+        $(window).on("reload",function(){
+            const prevComm5=localStorage.getItem('c5');
+            $("#i5").html(prevComm5);
+        })
     </script>
     </head>
 
@@ -96,17 +97,15 @@
         <em>Start your discussion</em><hr>
         <div>
             <label>
-            <textarea id="comm" rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
-            <button id="btn">Post</button>
-        </div>
-        <div id="info"></div>
+            <textarea id="c5" rows="10" cols="80">Share your thoughts...</textarea></label>
+            <label>Name<input id="u5" type=text required /></label><br>
+            <label>Email<input type=\text\></label><br>
+            <button id="p5" class="postbtn">Post</button>
+        </div><hr>
+        <br>
+        <div id="i5" class="comm"></div>
 
-        <script>
-            function comment(){
-                var infoDiv=document.getElementById("info");
-                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label><br>"
-            }
-        </script>
+        
     </body>
     <footer class="footerclass"><hr>
         <p class="standard">&copy; 2021 Tiana Paunoska</p>

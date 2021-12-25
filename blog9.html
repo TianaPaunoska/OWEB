@@ -15,32 +15,33 @@
     <script>
         $(window).on("load",function(){
             $(document).ready(function(){
-                $("#btn").click(function(){
-                    var comm=$("#comm").val();
-                    var time=new Date($.now());
-                    var day=time.getDate();
-                    var month=time.getMonth();
-                    var year=time.getFullYear();
-                    var hour=time.getHours();
-                    var min=time.getMinutes();
-                    var prev=$("#info").html();
-                    localStorage.setItem('comm',prev);
-                    $("#info").html(prev + "<em>User says: </em>" + " " + comm + hour + ":" + min + " " + day + "." + month + "." + year + "<br>");
+                $("#p9").click(function(){
+                    var user9=$("#u9").val();
+                    var comment9=$("#c9").val();
+                    var time9=new Date($.now());
+                    var day9=time9.getDate();
+                    var month9=time9.getMonth();
+                    var year9=time9.getFullYear();
+                    var hour9=time9.getHours();
+                    var min9=time9.getMinutes();
+                    var prev9=$("#i9").html();
+                    localStorage.setItem('c9',prev9);
+                    $("#i9").html(prev9 + "<div class=\"imguser\"><img src=\"sliki/user.png\" width=\"50\" height=\"50\"></div><div class=\"commbox\"><p class=\"username\">" + user9 + "</p><em class=\"timetext\">" + hour9 +":" + min9 + "   " + day9 + "/" + month9 + "/" + year9 + "</em><p class=\"commtext\">" + comment9 + "</p></div><hr><br>");
                 })
             })
         })
     </script>
     <script>
         $(window).on("load",function(){
-            const prevItems=localStorage.getItem('comm');
-            $("#info").html(prevItems);
+            const prevComm9=localStorage.getItem('c9');
+            $("#i9").html(prevComm9);
         })
     </script>
     <script>
-     $(window).on("reload",function(){
-            const prevItems=localStorage.getItem('comm');
-            $("#info").html(prevItems);
-        })   
+        $(window).on("reload",function(){
+            const prevComm9=localStorage.getItem('c9');
+            $("#i9").html(prevComm9);
+        })
     </script>
     </head>
 
@@ -90,19 +91,17 @@ Read More: 2022 New Music Releases | https://ultimateclassicrock.com/2022-new-mu
         </div>
         <br>
             <em>Start your discussion</em><hr>
-        <div>
-            <label>
-            <textarea id="comm" rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
-            <button id="btn">Post</button>
-        </div>
-        <div id="info"></div>
+            <div>
+                <label>
+                <textarea id="c9" rows="10" cols="80">Share your thoughts...</textarea></label>
+                <label>Name<input id="u9" type=text required /></label><br>
+                <label>Email<input type=\text\></label><br>
+                <button id="p9" class="postbtn">Post</button>
+            </div><hr>
+            <br>
+            <div id="i9" class="comm"></div>
 
-        <script>
-            function comment(){
-                var infoDiv=document.getElementById("info");
-                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label><br>"
-            }
-        </script>
+        
     </body>
     <footer class="footerclass"><hr>
         <p class="standard">&copy; 2021 Tiana Paunoska</p>

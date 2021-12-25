@@ -225,3 +225,47 @@ label
 {
     position: relative;
 }
+
+.imguser
+{
+    display: inline;
+    position: relative;
+}
+
+.commbox
+{
+    display: inline;
+    position: relative;
+}
+
+.username
+{
+    margin-left: -300px;
+    display: inline;
+    position: relative;
+    font-size: medium;
+    color: rgb(102, 1, 1);
+    font-weight: bold;
+}
+
+.timetext
+{
+    display: inline;
+    position: relative;
+    font-size: small;
+    color: black;
+    opacity: 0.5;
+    margin-left: -200px;
+}
+
+.commtext
+{
+    font-size: 12pt;
+    color: black;
+    font-family: 'Noto Serif Display', serif;
+}
+
+.postbtn
+{
+    margin-left: 1400px;
+}

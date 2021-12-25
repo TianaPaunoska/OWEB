@@ -15,32 +15,33 @@
     <script>
         $(window).on("load",function(){
             $(document).ready(function(){
-                $("#btn").click(function(){
-                    var comm=$("#comm").val();
-                    var time=new Date($.now());
-                    var day=time.getDate();
-                    var month=time.getMonth();
-                    var year=time.getFullYear();
-                    var hour=time.getHours();
-                    var min=time.getMinutes();
-                    var prev=$("#info").html();
-                    localStorage.setItem('comm',prev);
-                    $("#info").html(prev + "<em>User says: </em>" + " " + comm + hour + ":" + min + " " + day + "." + month + "." + year + "<br>");
+                $("#p8").click(function(){
+                    var user8=$("#u8").val();
+                    var comment8=$("#c8").val();
+                    var time8=new Date($.now());
+                    var day8=time8.getDate();
+                    var month8=time8.getMonth();
+                    var year8=time8.getFullYear();
+                    var hour8=time8.getHours();
+                    var min8=time8.getMinutes();
+                    var prev8=$("#i8").html();
+                    localStorage.setItem('c8',prev8);
+                    $("#i8").html(prev8 + "<div class=\"imguser\"><img src=\"sliki/user.png\" width=\"50\" height=\"50\"></div><div class=\"commbox\"><p class=\"username\">" + user8 + "</p><em class=\"timetext\">" + hour8 +":" + min8 + "   " + day8 + "/" + month8 + "/" + year8 + "</em><p class=\"commtext\">" + comment8 + "</p></div><hr><br>");
                 })
             })
         })
     </script>
     <script>
         $(window).on("load",function(){
-            const prevItems=localStorage.getItem('comm');
-            $("#info").html(prevItems);
+            const prevComm8=localStorage.getItem('c8');
+            $("#i8").html(prevComm8);
         })
     </script>
     <script>
-     $(window).on("reload",function(){
-            const prevItems=localStorage.getItem('comm');
-            $("#info").html(prevItems);
-        })   
+        $(window).on("reload",function(){
+            const prevComm8=localStorage.getItem('c8');
+            $("#i8").html(prevComm8);
+        })
     </script>
     </head>
 
@@ -95,19 +96,17 @@ Juno Principal Investigator Scott Bolton of the Southwest Research Institute in 
         </div></div>
         <br>
             <em>Start your discussion</em><hr>
-        <div>
-            <label>
-            <textarea id="comm" rows="10" cols="80" onclick="comment()">Share your thoughts...</textarea></label>
-            <button id="btn">Post</button>
-        </div>
-        <div id="info"></div>
+            <div>
+                <label>
+                <textarea id="c8" rows="10" cols="80">Share your thoughts...</textarea></label>
+                <label>Name<input id="u8" type=text required /></label><br>
+                <label>Email<input type=\text\></label><br>
+                <button id="p8" class="postbtn">Post</button>
+            </div><hr>
+            <br>
+            <div id="i8" class="comm"></div>
 
-        <script>
-            function comment(){
-                var infoDiv=document.getElementById("info");
-                infoDiv.innerHTML="<label>Name<input type=\"text\" required /></label><br><label>Email<input type=\"text\"></label><br>"
-            }
-        </script>
+        
     </body>
     <footer class="footerclass"><hr>
         <p class="standard">&copy; 2021 Tiana Paunoska</p>
